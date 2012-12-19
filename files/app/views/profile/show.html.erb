@@ -1,0 +1,40 @@
+<% content_for(:page_title) { @user.name } %>
+
+<% content_for(:share) { render "shared/share" } %>
+
+<ul class="list">
+
+  <li>
+
+    <div class="left">
+      <%= image_tag @user.avatar.url(:profile), :class =>"profile" %>
+    </div>
+    
+    <div class="item">
+
+      <h3><%= @user.name %></h3>
+      <h3 class="gray"><span class="gray"><%= @user.username %></span></h3>
+
+      <% if user_signed_in? %>
+        <p>
+          <% if current_user.id == @user.id %>
+            <%= label :user, :email %>: <%= @user.email %>
+            <br/><br/>
+            <%= button_with_link(t("common.edit"), "web-app-theme/application_edit.png", edit_profile_path) %>
+          <% else %>
+            <% if current_user.following.include?(@user) %>
+              <%= button_to_with_image(t(".remove_friend"), friends_path(@user), "web-app-theme/cross.png", :post) %>
+            <% else %>
+              <%= button_to_with_image(t(".add_friend"), friends_path(@user), "web-app-theme/add.png", :post) %>
+            <% end %>
+          <% end %>
+        </p>
+      <% end %>
+
+    </div>
+    
+  </li>
+</ul>
+<br/>
+
+<%= render "shared/followers", :users => @user.following, :title => t(".my_friends_title") %>

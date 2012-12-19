@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= t("common.app_name") %></title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="container">
+    <div id="box">
+      <h1><%= link_to t("common.app_name"), :root %></h1>
+      <div class="block">
+        <h2 class="title"><%= yield :title %></h2>
+        <div class="content login">
+          <%= render "layouts/flash", :flash => flash %>
+          <%= yield %>            
+          <%= render "devise/shared/links" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

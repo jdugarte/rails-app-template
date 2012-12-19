@@ -1,0 +1,17 @@
+<% content_for(:title) { t(".title") } %>
+
+<% if @search_in == "users" %>
+
+  <table class="table">
+    <tr><th class="first last"><%=t ".title_users" %></th></tr>
+    <% if @users.empty? %>
+      <tr><td><%=t ".no_results" %></td></tr>
+    <% else %>
+      <% @users.each do |u| %>
+        <tr><td><%= link_to_user_profile u %></td></tr>
+      <% end %>
+    <% end %>
+  </table>
+
+<% end %>
+  

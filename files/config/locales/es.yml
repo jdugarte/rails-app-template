@@ -1,0 +1,135 @@
+es:
+  
+  # common
+  common:
+    app_name: Listas de películas
+    hello_user: "¡Hola %{user}!"
+    are_you_sure: ¿Estás seguro?
+    back: Regresar
+    save: Guardar
+    edit: Editar
+    show: Mostrar
+    delete: Eliminar
+    or: o
+    cancel: Cancelar
+    
+  # Attributes names common to most models
+  attributes:
+    name: Nombre
+    
+  errors:
+    messages:
+      model_id_not_found: "La %{model} que buscas no existe"
+
+  # Active Record models configuration
+  activerecord:
+    attributes:
+      user:
+        username: Usuario
+        email: Email
+        password: Contraseña
+        password_confirmation: Confirmación de contraseña
+        current_password: Contraseña actual
+        avatar: Foto
+        remember_me: Recordarme
+
+  # views
+  layouts:
+    application:
+      nav_home: Inicio
+      nav_profile: Perfil
+      nav_profile_mobile: Yo
+      options_sign_up: Crear cuenta
+      options_sign_in: Entrar
+      options_sign_out: Salir
+    devise:
+      nav_home: Inicio
+      nav_profile: Profile
+      nav_profile_mobile: Yo
+      options_sign_up: Crear cuenta
+      options_sign_in: Entrar
+      options_sign_out: Salir
+  devise:
+    confirmations:
+      new:
+        title: Enviar de nuevo instrucciones de confirmación
+        submit: Enviar de nuevo instrucciones de confirmación
+    mailer:
+      confirmation_instructions:
+        welcome_user: "¡Bienvenido %{user}!"
+        line1: "Puedes confirmar tu cuenta haciendo click en el siguiente enlace:"
+        confirm_link: Confirmar mi cuenta
+      reset_password_instructions:
+        line1: "Alguien ha solicitado un cambio de contraseña. Puedes cambiarla haciendo click en el siguiente enlace."
+        change_link: Cambiar mi contraseña
+        line2: "Si no solicitaste esto, por favor ignora este mensaje."
+        line3: "Tu contraseña no será cambiada hasta que accedas al enlace anterior y crees una nueva."
+      unlock_instructions:
+        line1: "Tu cuenta ha sido bloqueada debido a que se ha intentado entrar sin éxito demasiadas veces."
+        line2: "Haz click en el siguiente enlace para desbloquear tu cuenta:"
+        unlock_link: Desbloquear mi cuenta
+    passwords:
+      edit:
+        title: Cambiar tu contraseña
+        new_password: Nueva contraseña
+        confirm_new_password: Confirmar nueva contraseña
+        submit: Cambiar mi contraseña
+      new:
+        title: ¿Olvidaste tu contraseña?
+        submit: Enviar instrucciones para cambiar mi contraseña
+    registrations:
+      edit:
+        title: Editar usuario
+        password_explain: "(dejar en blanco si no quieres cambiarlo)"
+        current_password_explain: "(necesitamos tu contraseña actual para confirmar tus cambios)"
+        submit: Actualizar
+        cancel_title: Cancelar mi cuenta
+        cancel_link: Cancelar mi cuenta
+        unhappy: ¿Descontento?
+      new:
+        title: Crear cuenta
+        submit: Crear cuenta
+    sessions:
+      new:
+        title: Entrar
+        submit: Entrar
+    shared:
+      links:
+        sign_in: Entrar
+        sign_up: Crear cuenta
+        forgot_password: "¿Olvidaste tu contraseña?"
+        resend_confirmation: "¿No recibiste las instrucciones de confirmación?"
+        resend_unlock: "¿No recibiste las instrucciones de desbloqueo?"
+    unlocks:
+      new:
+        title: Enviar de nuevo instrucciones de desbloqueo
+        submit: Enviar de nuevo instrucciones de desbloqueo
+  home:
+    search:
+      box_title: Buscar
+      title: Resultados de búsqueda
+      title_users: Amigos
+      no_results: No hay resultados
+      users: Usuarios
+      submit: Buscar
+  profile:
+    edit:
+      title: Editar perfil
+      password_title: Cambiar contraseña
+      password_submit: Cambiar contraseña
+      edited_successfully: Tu perfil ha sido actualizada
+      password_updated_successfully: La contraseña ha sido cambiada correctamete
+      error_avatar_file_size: La foto debe ser de 100Kb o menos
+    show:
+      title: Perfil
+      add_friend: Seguir
+      remove_friend: Dejar
+      my_friends_title: Siguiendo
+      user_not_found: Usuario no existe
+      
+  # helpers      
+  helpers:
+    error_messages:
+      message:
+        one: "No se ha podido guardar debido a este error:"
+        other: "No se ha podido guardar debido a estos %{count} errores:"

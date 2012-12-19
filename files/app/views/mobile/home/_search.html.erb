@@ -1,0 +1,7 @@
+<h3><%=t ".box_title" %></h3>
+<%= form_tag search_path, :method => :get, :class => "form" do %>
+  <% options_for_search_in = [[t(".users"), "users"]] %>
+  <%= select_tag("search_in", options_for_select(options_for_search_in, params[:search_in]), { :id => "select_filter_search_in" }) %>
+  <%= text_field_tag :search, params[:search], :class => "text_field" %>
+  <%= submit_button_with_image(t(".submit"), "web-app-theme/magnifier.png") %>
+<% end %>

@@ -1,0 +1,16 @@
+<% unless users.empty? %>
+  <p>
+    <ul data-role="listview">
+      <li data-role="list-divider" role="heading"><%= title %></li>
+      <% users.each do |user| %>
+        <li>
+          <%= link_to profile_path(user.username) do %>
+            <%= image_tag(user.avatar.url(:thumb), :class => "ui-li-icon") %>
+            <p><%= user.name %> (<%= user.username %>)</p>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </p>
+<% end %>
+

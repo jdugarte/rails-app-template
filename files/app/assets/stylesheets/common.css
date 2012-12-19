@@ -1,0 +1,139 @@
+/* general */
+
+.center {
+  text-align: center;
+}
+
+.gray { color:#999999; }
+
+/* flash-messages */
+
+.flash .message {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  text-align:center;
+  margin: 0 auto 15px;
+}
+
+.flash .message p {
+  margin:8px;
+}
+.flash .error {
+  border: 1px solid #fbb;
+  background-color: #fdd;
+}
+.flash .warning, .flash .alert {
+  border: 1px solid #fffaaa;
+  background-color: #ffffcc;
+}
+.flash .notice {
+  border: 1px solid #1FDF00;
+  background-color: #BBFFB6;
+}
+
+/* forms */
+
+.form div.fieldWithErrors label.label {
+  display: inline;
+}
+
+.form .fieldWithErrors .error {
+  color: red;
+}
+
+/* tables */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;  
+  margin-bottom: 15px;
+}
+
+.table th {
+  padding: 10px 10px 10px 17px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.table th.center, .table td.center {
+  text-align: center;
+}
+
+.table .checkbox {
+  margin-left: 10px;
+  width: 10px;
+}
+
+.table td {
+  padding: 10px;
+}
+
+.table td.last {
+  text-align: right;
+}
+
+.table th, .table th a {
+  background: #2F427A;
+  color: #FFF;
+}
+
+.table td {
+  border-bottom:1px solid #F0F0EE;
+}
+
+.table th.small_mobile, .table td.small_mobile, .table th.small, .table td.small {
+  width: 50px;
+}
+
+.table tbody tr:hover {
+  background: #f7fafc;
+}
+
+/* profile */
+
+.ui-grid-a > .ui-block-a.side { width: 40%; } 
+.ui-grid-b > .ui-block-b.main { width: 60%; }
+.ui-block-b.main h3 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* share */
+
+.share_this {
+  float: right;
+  width: 80px;
+  position: relative;
+  top: 15px;
+  right: 12px;
+}
+
+/* sortable */
+
+#sortable {
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0; 
+}
+
+#sortable li {
+  margin: 0 3px 3px 3px;
+  padding: 0.4em;
+  padding-left: 1.5em;
+  min-height: 18px;
+}
+
+#sortable li span {
+  position: absolute;
+  margin-left: -1.3em;
+}
+
+/* loading */
+
+.loading {
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+}
+

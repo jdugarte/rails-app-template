@@ -1,0 +1,5 @@
+<p><%=t ".welcome_user", :user => @resource.name %></p>
+
+<p><%=t ".line1" %></p>
+
+<p><%= link_to t(".confirm_link"), confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
