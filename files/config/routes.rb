@@ -1,4 +1,4 @@
-Movielists::Application.routes.draw do
+APPNAME::Application.routes.draw do
 
   get 'home/index', :as => 'home'
   get 'home/home' => 'home#home', :as => 'public_home'
