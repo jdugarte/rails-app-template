@@ -2,7 +2,7 @@ es:
   
   # common
   common:
-    app_name: Listas de películas
+    app_name: APPNAME
     hello_user: "¡Hola %{user}!"
     are_you_sure: ¿Estás seguro?
     back: Regresar
