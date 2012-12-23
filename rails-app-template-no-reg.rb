@@ -259,6 +259,17 @@ end
 FILE
 end
 
+# db/seeds.rb
+append_file 'db/seeds.rb' do
+<<-FILE
+
+user = User.create :username => "admin", :name => 'Admin', :email => 'admin@local.com', :password => '123123', 
+                   :password_confirmation => '123123', :admin => true
+user.confirm! 
+
+FILE
+end
+
 # APPNAME
 %w{
   config/routes.rb
