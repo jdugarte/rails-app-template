@@ -14,11 +14,12 @@ class ProfileControllerMobileTest < ActionController::TestCase
     get :show, username: users(:sxcine).username
     assert_response :success
   end
-  test "should show profile while not signed in" do
+  test "should not show profile while not signed in" do
     get :show, username: @user.username
-    assert_response :success
+    assert_redirected_to new_user_session_path
   end
   test "should show error when user doesn't exist" do
+    sign_in @user
     get :show, username: "xxx"
     assert_redirected_to root_path
   end

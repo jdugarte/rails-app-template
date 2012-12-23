@@ -1,10 +1,9 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-
-  before_filter :authenticate_user!
   
   before_filter :prep_mobile
   before_filter :set_locale
+  before_filter :authenticate_user!
   rescue_from ActiveRecord::RecordNotFound, :with => :rescue_from_record_not_found
   
   private
