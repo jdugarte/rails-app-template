@@ -291,6 +291,7 @@ remove_file 'app/assets/images/rails.png'
 
 # migrate
 rake "db:migrate"
+rake "db:seed"
 
 # commit all changes
 git :add => "."
