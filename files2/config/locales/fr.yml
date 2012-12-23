@@ -1,0 +1,135 @@
+fr:
+  
+  # common
+  common:
+    app_name: APPNAME
+    hello_user: "Bonjour %{user}!"
+    are_you_sure: Etes-vous sûr?
+    back: Revenir
+    save: Sauvegarder
+    edit: Modifier
+    show: Montrer
+    delete: Effacer
+    or: ou
+    cancel: Annuler
+    
+  # Attributes names common to most models
+  attributes:
+    name: Nom
+    
+  errors:
+    messages:
+      model_id_not_found: "La %{model} que vous avez demandé n'a pas été trouvé."
+
+  # Active Record models configuration
+  activerecord:
+    attributes:
+      user:
+        username: Utilisateur
+        email: Email
+        password: Mot de passe
+        password_confirmation: Confirmation mot de passe
+        current_password: Mot de passe actuel
+        avatar: Photo
+        remember_me: Rester connecté
+
+  # views
+  layouts:
+    application:
+      nav_home: Accueil
+      nav_profile: Profil
+      nav_profile_mobile: Moi
+      options_sign_up: Signer
+      options_sign_in: Se connecter
+      options_sign_out: Se déconnecter
+    devise:
+      nav_home: Accueil
+      nav_profile: Profil
+      nav_profile_mobile: Moi
+      options_sign_up: Signer
+      options_sign_in: Se connecter
+      options_sign_out: Se déconnecter
+  devise:
+    confirmations:
+      new:
+        title: Renvoyer les instructions de confirmation
+        submit: Renvoyer les instructions de confirmation
+    mailer:
+      confirmation_instructions:
+        welcome_user: "Bienvenu %{user}!"
+        line1: "Vous pouvez confirmer votre email via le lien ci-dessous:"
+        confirm_link: Confirmer mon compte
+      reset_password_instructions:
+        line1: "Quelqu'un a demandé un lien pour changer votre mot de passe, vous pouvez le faire via le lien ci-dessous."
+        change_link: Changer mon mot de passe
+        line2: "Si vous n'avez pas demandé cela, s'il vous plaît ignorer cet e-mail."
+        line3: "Votre mot de passe ne changera pas jusqu'à ce que vous ouvriez le lien ci-dessus et en créer un nouveau."
+      unlock_instructions:
+        line1: "Votre compte a été bloqué en raison d'une quantité excessive de tentatives de connexion infructueuses."
+        line2: "Cliquez sur le lien ci-dessous pour debloquer votre compte:"
+        unlock_link: Debloquer mon compte
+    passwords:
+      edit:
+        title: Changer mon mot de passe
+        new_password: Nouveau mot de passe
+        confirm_new_password: Confirmer nouveau mot de passe
+        submit: Confirmer nouveau mot de passe
+      new:
+        title: Mot de passe oublié?
+        submit: Envoyez-moi les instructions
+    registrations:
+      edit:
+        title: Modifier l'utilisateur
+        password_explain: "(laisser en blanc si vous ne voulez pas le changer)"
+        current_password_explain: "(nous avons besoin de votre mot de passe actuel pour confirmer vos modifications)"
+        submit: Mettre à jour
+        cancel_title: Annuler mon compte
+        cancel_link: Annuler mon compte
+        unhappy: Malheureux?
+      new:
+        title: Signer
+        submit: Signer
+    sessions:
+      new:
+        title: Se connecter
+        submit: Se connecter
+    shared:
+      links:
+        sign_in: Se connecter
+        sign_up: Signer
+        forgot_password: "Mot de passe oublié?"
+        resend_confirmation: "Vous n'avez pas reçu les instructions de confirmation?"
+        resend_unlock: "Vous n'avez pas reçu les instructions déblocage?"
+    unlocks:
+      new:
+        title: Renvoyer les instructions de déblocage
+        submit: Renvoyer les instructions de déblocage
+  home:
+    search:
+      box_title: Rechercher
+      title: Résultats de la recherche
+      title_users: Amies
+      no_results: Aucun résultat
+      users: Utilisateurs
+      submit: Rechercher
+  profile:
+    edit:
+      title: Modifier profil
+      password_title: Modifier mot de passe
+      password_submit: Modifier mot de passe
+      edited_successfully: Profil a été mis à jour.
+      password_updated_successfully: Mot de passe a été mis à jour.
+      error_avatar_file_size: doit être inférieure à 100 Ko
+    show:
+      title: Profil
+      add_friend: Suivre
+      remove_friend: Quitter
+      my_friends_title: Abonnements
+      user_not_found: Utilisateur non trouvé
+      
+  # helpers      
+  helpers:
+    error_messages:
+      message:
+        one: "%{count} erreur interdit cette %{object_name} d'être sauvegardé:"
+        other: "%{count} erreurs interdit cette %{object_name} d'être sauvegardé:"

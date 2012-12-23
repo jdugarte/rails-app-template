@@ -1,0 +1,7 @@
+<p><%=t "common.hello_user", :user => @resource.name %></p>
+
+<p><%=t ".line1" %></p>
+
+<p><%=t ".line2" %></p>
+
+<p><%= link_to t(".unlock_link"), unlock_url(@resource, :unlock_token => @resource.unlock_token) %></p>

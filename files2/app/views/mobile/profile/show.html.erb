@@ -1,0 +1,26 @@
+<% content_for(:page_title) { @user.name } %>
+
+<div class="ui-grid-a">
+  <div class="ui-block-a side">
+    <%= image_tag @user.avatar.url(:profile), :class =>"profile" %>
+  </div>
+  <div class="ui-block-b main">
+    <h3><%= @user.name %></h3>
+    <h3 class="gray"><span class="gray"><%= @user.username %></span></h3>
+    <% if user_signed_in? && current_user.id == @user.id%>
+      <p>
+        <%= label :user, :email %>: <%= @user.email %>
+      </p>
+    <% end %>
+  </div>
+</div>
+<p>
+  <% if user_signed_in? %>
+    <p>
+      <% if current_user.id == @user.id %>
+        <%= button_to_with_image(t("common.edit"), edit_profile_path, "web-app-theme/application_edit.png") %>
+      <% end %>
+    </p>
+  <% end %>
+</p>
+<br/>

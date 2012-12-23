@@ -1,0 +1,13 @@
+/* tables */
+table.tablesorter thead tr .header {
+	background-image: image-url("tablesort/bg.gif");
+	background-repeat: no-repeat;
+	background-position: left center;
+	cursor: pointer;
+}
+table.tablesorter thead tr .headerSortUp {
+	background-image: image-url("tablesort/asc.gif");
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: image-url("tablesort/desc.gif");
+}

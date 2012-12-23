@@ -1,0 +1,135 @@
+en:
+  
+  # common
+  common:
+    app_name: APPNAME
+    hello_user: "Hello %{user}!"
+    are_you_sure: Are you sure?
+    back: Back
+    save: Save
+    edit: Edit
+    show: Show
+    delete: Delete
+    or: or
+    cancel: Cancel
+    
+  # Attributes names common to most models
+  attributes:
+    name: Name
+    
+  errors:
+    messages:
+      model_id_not_found: "The %{model} you requested could not be found."
+
+  # Active Record models configuration
+  activerecord:
+    attributes:
+      user:
+        username: Username
+        email: Email
+        password: Password
+        password_confirmation: Password confirmation
+        current_password: Current password
+        avatar: Picture
+        remember_me: Remember me
+
+  # views
+  layouts:
+    application:
+      nav_home: Home
+      nav_profile: Profile
+      nav_profile_mobile: Me
+      options_sign_up: Sign up
+      options_sign_in: Sign in
+      options_sign_out: Sign out
+    devise:
+      nav_home: Home
+      nav_profile: Profile
+      nav_profile_mobile: Me
+      options_sign_up: Sign up
+      options_sign_in: Sign in
+      options_sign_out: Sign out
+  devise:
+    confirmations:
+      new:
+        title: Resend confirmation instructions
+        submit: Resend confirmation instructions
+    mailer:
+      confirmation_instructions:
+        welcome_user: "Welcome %{user}!"
+        line1: "You can confirm your account email through the link below:"
+        confirm_link: Confirm my account
+      reset_password_instructions:
+        line1: "Someone has requested a link to change your password, and you can do this through the link below."
+        change_link: Change my password
+        line2: "If you didn't request this, please ignore this email."
+        line3: "Your password won't change until you access the link above and create a new one."
+      unlock_instructions:
+        line1: "Your account has been locked due to an excessive amount of unsuccessful login attempts."
+        line2: "Click the link below to unlock your account:"
+        unlock_link: Unlock my account
+    passwords:
+      edit:
+        title: Change your password
+        new_password: New password
+        confirm_new_password: Confirm new password
+        submit: Change my password
+      new:
+        title: Forgot your password?
+        submit: Send me reset password instructions
+    registrations:
+      edit:
+        title: Edit User
+        password_explain: "(leave blank if you don't want to change it)"
+        current_password_explain: "(we need your current password to confirm your changes)"
+        submit: Update
+        cancel_title: Cancel my account
+        cancel_link: Cancel my account
+        unhappy: Unhappy?
+      new:
+        title: Sign up
+        submit: Sign up
+    sessions:
+      new:
+        title: Sign in
+        submit: Sign in
+    shared:
+      links:
+        sign_in: Sign in
+        sign_up: Sign up
+        forgot_password: "Forgot your password?"
+        resend_confirmation: "Didn't receive confirmation instructions?"
+        resend_unlock: "Didn't receive unlock instructions?"
+    unlocks:
+      new:
+        title: Resend unlock instructions
+        submit: Resend unlock instructions
+  home:
+    search:
+      box_title: Search
+      title: Search results
+      title_users: Friends
+      no_results: No results
+      users: Users
+      submit: Search
+  profile:
+    edit:
+      title: Edit profile
+      password_title: Change password
+      password_submit: Change password
+      edited_successfully: Profile was successfully updated.
+      password_updated_successfully: Password was successfully updated.
+      error_avatar_file_size: must be less than 100 Kb
+    show:
+      title: Profile
+      add_friend: Follow
+      remove_friend: Unfollow
+      my_friends_title: Following
+      user_not_found: User not found
+      
+  # helpers      
+  helpers:
+    error_messages:
+      message:
+        one: "%{count} error prohibited this %{object_name} from being saved:"
+        other: "%{count} errors prohibited this %{object_name} from being saved:"

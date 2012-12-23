@@ -1,0 +1,92 @@
+<h2><%=t ".title" %></h2>
+
+<%= form_for(@user, :url => update_profile_url, :html => { :method => :put, :class => "form" }) do |f| %>
+
+  <div class="group wat-cf">
+    <div class="left">
+      <%= f.label :username, :class => "label right" %><br />
+    </div>
+    <div class="right">
+      <%= f.text_field :username, :class =>"text_field" %>
+    </div>
+  </div>
+
+  <div class="group wat-cf">
+    <div class="left">
+      <%= f.label :name, :class => "label right" %><br />
+    </div>
+    <div class="right">
+      <%= f.text_field :name, :class =>"text_field" %>
+    </div>
+  </div>
+
+  <div class="group wat-cf">
+    <div class="left">
+      <%= f.label :email, :class => "label right" %><br />
+    </div>
+    <div class="right">
+      <%= f.email_field :email, :class =>"text_field" %>
+    </div>
+  </div>
+
+  <% unless is_mobile? %>
+    <div class="group wat-cf">
+      <div class="left">
+        <%= avatar_label_with_error_message(label_tag(:avatar, User.human_attribute_name("avatar"), :class => "label right"), @user) %>
+        <br />
+      </div>
+      <div class="right">
+        <%= f.file_field :avatar %>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="group navform wat-cf">
+    <div class="right">
+      <%= submit_button_with_image(t("common.save"), "web-app-theme/tick.png") %>
+      <%= link_to t("common.cancel"), profile_path(current_user.username), :class => "text_button_padding link_button" %>
+    </div>
+  </div>
+  
+<% end %>
+
+<br/><hr><br/>
+
+<h2><%=t ".password_title" %></h2>
+
+<%= form_for(@password, :url => change_password_path, :html => { :method => :put, :class => "form" }) do |f| %>
+
+  <div class="group wat-cf">
+    <div class="left">
+      <%= f.label :current_password, :class => "label right" %>
+    </div>
+    <div class="right">
+      <%= f.password_field :current_password, :class =>"text_field" %>
+    </div>
+  </div>
+
+  <div class="group wat-cf">
+    <div class="left">
+      <%= f.label :password, :class => "label right" %>
+    </div>
+    <div class="right">
+      <%= f.password_field :password, :autocomplete => "off", :class =>"text_field" %>
+    </div>
+  </div>
+
+  <div class="group wat-cf">
+    <div class="left">
+      <%= f.label :password_confirmation, :class => "label right" %>
+    </div>
+    <div class="right">
+      <%= f.password_field :password_confirmation, :class =>"text_field" %>
+    </div>
+  </div>
+
+  <div class="group navform wat-cf">
+    <div class="right">
+      <%= submit_button_with_image(t(".password_submit"), "web-app-theme/tick.png") %>
+    </div>
+  </div>
+
+<% end %>

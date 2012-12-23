@@ -1,0 +1,30 @@
+<% content_for(:page_title) { @user.name } %>
+
+<ul class="list">
+
+  <li>
+
+    <div class="left">
+      <%= image_tag @user.avatar.url(:profile), :class =>"profile" %>
+    </div>
+    
+    <div class="item">
+
+      <h3><%= @user.name %></h3>
+      <h3 class="gray"><span class="gray"><%= @user.username %></span></h3>
+
+      <% if user_signed_in? %>
+        <p>
+          <% if current_user.id == @user.id %>
+            <%= label :user, :email %>: <%= @user.email %>
+            <br/><br/>
+            <%= button_with_link(t("common.edit"), "web-app-theme/application_edit.png", edit_profile_path) %>
+          <% end %>
+        </p>
+      <% end %>
+
+    </div>
+    
+  </li>
+</ul>
+<br/>

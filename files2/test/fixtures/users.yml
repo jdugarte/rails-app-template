@@ -1,0 +1,35 @@
+jd:
+  username: jd
+  name: Jesus Dugarte
+  email: jd@local.com
+  encrypted_password: $2a$10$9LMgoWSIGQDlZA.wmQ21i.2TCKXUTf2F413BF4o9reRhCD9x3Lg9m
+  confirmation_token: jd
+  confirmed_at: 2011-01-02 08:31:23
+  confirmation_sent_at: 2011-01-02 08:30:59
+  
+sxcine:
+  username: sxcine
+  name: sxcine
+  email: sxcine@local.com
+  encrypted_password: $2a$10$9LMgoWSIGQDlZA.wmQ21i.2TCKXUTf2F413BF4o9reRhCD9x3Lg9m
+  confirmation_token: sxcine
+  confirmed_at: 2011-01-02 08:31:23
+  confirmation_sent_at: 2011-01-02 08:30:59
+
+other:
+  username: other
+  name: other
+  email: other@local.com
+  encrypted_password: $2a$10$9LMgoWSIGQDlZA.wmQ21i.2TCKXUTf2F413BF4o9reRhCD9x3Lg9m
+  confirmation_token: other
+  confirmed_at: 2011-01-02 08:31:23
+  confirmation_sent_at: 2011-01-02 08:30:59
+
+bob:
+  username: Bob
+  name: Bob
+  email: bob@local.com
+  encrypted_password: $2a$10$9LMgoWSIGQDlZA.wmQ21i.2TCKXUTf2F413BF4o9reRhCD9x3Lg9m
+  confirmation_token: bob
+  confirmed_at: 2011-01-02 08:31:23
+  confirmation_sent_at: 2011-01-02 08:30:59

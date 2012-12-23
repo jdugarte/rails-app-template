@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= t("common.app_name") %><%= raw(" - " + content_for(:page_title)) if content_for?(:page_title) %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= javascript_tag do %>
+    window.is_mobile = "<%= is_mobile? %>";
+  <% end %>
+  <%= javascript_include_tag "application" %>
+  <%= javascript_tag do %>
+    $(document).bind("mobileinit", function(){
+      $.mobile.pageLoadErrorMessage = "Loading"
+    });
+    $(document).bind('pagechange',function(event, ui){
+      <!-- do_on_load(); -->
+    });
+    $('div[data-role="page"]').live('pagehide', function(event, ui){
+      var page = $(event.target);
+      if(page.attr('data-cache') == 'never'){
+        page.remove();
+      };
+    });
+  <% end %>
+  <%= stylesheet_link_tag    "http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css", :media => "all" %>
+  <%= javascript_include_tag "http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js" %>
+  <%= stylesheet_link_tag    asset_path("common.css"), :media => "all" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div data-role="page" data-id="mobile_app" data-cache="never">
+
+  <div data-role="header" data-position="fixed">
+  
+    <h1><%= t("common.app_name") %></h1>
+
+    <% if user_signed_in? %> 
+      <%= link_to t(".options_sign_out"), destroy_user_session_path, :method => :delete, "class" => "ui-btn-right" %>
+    <% else %>
+      <%= link_to t(".options_sign_in"), new_user_session_path, "class" => "ui-btn-left" %>
+    <% end %>
+
+  </div>
+
+  <div data-role="content">
+
+    <h2 class="title"><%= yield :title %></h2>
+    <%= yield %>
+    
+  </div>
+
+  <div data-role="footer" data-id="footer_toolbar" data-position="fixed">
+    <div data-role="navbar" data-iconpos="left">
+      <ul>
+        <% if user_signed_in? %> 
+          <li><%= link_to t(".nav_home"), :root, :data => { :icon => "home" } %></li>
+          <li><%= link_to current_user.username, profile_path(current_user.username), :data => { :icon => "gear" } %></li>
+        <% else %>
+          <li><%= link_to t(".nav_home"), public_home_path, :data => { :icon => "home" } %></li>
+        <% end %>
+      </ul>
+    </div> 
+  </div> 
+  
+</div>
+</body>
+</html>
