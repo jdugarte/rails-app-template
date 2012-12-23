@@ -34,7 +34,6 @@ app/assets/images/web-app-theme/magnifier.png
 app/assets/images/web-app-theme/notice.png
 app/assets/images/web-app-theme/tick.png
 app/assets/images/web-app-theme/warning.png
-app/assets/javascripts/friends.js.coffee
 app/assets/javascripts/jquery.tablesorter.min.js
 app/assets/javascripts/profile.js.coffee
 app/assets/stylesheets/common.css
